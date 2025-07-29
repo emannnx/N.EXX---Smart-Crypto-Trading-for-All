@@ -1,0 +1,182 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* N.EXX Design System - Dark theme with neon accents */
+
+@layer base {
+  :root {
+    /* N.EXX Brand Colors */
+    --nexx-dark: 118 60% 4%;          /* #082207 */
+    --nexx-neon-green: 72 100% 45%;   /* #88E600 */
+    --nexx-neon-yellow: 75 100% 50%;  /* #AFFE00 */
+    --nexx-gold: 45 100% 50%;         /* #FFC700 */
+    --nexx-orange: 2 94% 51%;         /* #F90C0A */
+    
+    /* Gradient variations */
+    --nexx-glow-green: 72 100% 45% / 0.2;
+    --nexx-glow-yellow: 75 100% 50% / 0.2;
+    --nexx-glow-gold: 45 100% 50% / 0.2;
+    
+    /* Design System Colors */
+    --background: var(--nexx-dark);
+    --foreground: 0 0% 95%;
+
+    --card: 118 50% 6%;
+    --card-foreground: 0 0% 95%;
+
+    --popover: 118 50% 6%;
+    --popover-foreground: 0 0% 95%;
+
+    --primary: var(--nexx-neon-green);
+    --primary-foreground: var(--nexx-dark);
+
+    --secondary: var(--nexx-neon-yellow);
+    --secondary-foreground: var(--nexx-dark);
+
+    --accent: var(--nexx-gold);
+    --accent-foreground: var(--nexx-dark);
+
+    --destructive: var(--nexx-orange);
+    --destructive-foreground: 0 0% 98%;
+
+    --muted: 118 30% 8%;
+    --muted-foreground: 0 0% 60%;
+
+    --border: 118 30% 15%;
+    --input: 118 30% 10%;
+    --ring: var(--nexx-neon-green);
+
+    --radius: 0.75rem;
+
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(var(--nexx-neon-green)), hsl(var(--nexx-neon-yellow)));
+    --gradient-secondary: linear-gradient(135deg, hsl(var(--nexx-gold)), hsl(var(--nexx-orange)));
+    --gradient-glow: radial-gradient(circle at center, hsl(var(--nexx-glow-green)), transparent 70%);
+    
+    /* Shadows */
+    --shadow-neon: 0 0 20px hsl(var(--nexx-glow-green)), 0 0 40px hsl(var(--nexx-glow-green));
+    --shadow-glow: 0 4px 20px hsl(var(--nexx-glow-green));
+    --shadow-card: 0 8px 32px hsl(0 0% 0% / 0.3);
+    
+    /* Animations */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-glow: box-shadow 0.3s ease-in-out;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-space-grotesk;
+    overflow-x: hidden;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@layer components {
+  /* Neon glow effects */
+  .neon-glow {
+    transition: var(--transition-glow);
+  }
+  
+  .neon-glow:hover {
+    box-shadow: var(--shadow-neon);
+  }
+  
+  /* Gradient backgrounds */
+  .gradient-primary {
+    background: var(--gradient-primary);
+  }
+  
+  .gradient-secondary {
+    background: var(--gradient-secondary);
+  }
+  
+  /* Custom animations */
+  .animate-float {
+    animation: float 6s ease-in-out infinite;
+  }
+  
+  .animate-pulse-glow {
+    animation: pulseGlow 2s ease-in-out infinite alternate;
+  }
+  
+  .animate-ticker {
+    animation: ticker 60s linear infinite;
+  }
+  
+  /* Text glow effect */
+  .text-glow {
+    text-shadow: 0 0 10px currentColor;
+  }
+}
+
+@layer utilities {
+  .text-neon-green {
+    color: hsl(var(--nexx-neon-green));
+  }
+  
+  .text-neon-yellow {
+    color: hsl(var(--nexx-neon-yellow));
+  }
+  
+  .text-gold {
+    color: hsl(var(--nexx-gold));
+  }
+  
+  .text-orange {
+    color: hsl(var(--nexx-orange));
+  }
+  
+  .bg-neon-green {
+    background-color: hsl(var(--nexx-neon-green));
+  }
+  
+  .bg-neon-yellow {
+    background-color: hsl(var(--nexx-neon-yellow));
+  }
+  
+  .bg-gold {
+    background-color: hsl(var(--nexx-gold));
+  }
+  
+  .bg-orange {
+    background-color: hsl(var(--nexx-orange));
+  }
+}
+
+/* Keyframes */
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-20px); }
+}
+
+@keyframes pulseGlow {
+  0% { box-shadow: 0 0 5px hsl(var(--nexx-glow-green)); }
+  100% { box-shadow: 0 0 20px hsl(var(--nexx-glow-green)), 0 0 30px hsl(var(--nexx-glow-green)); }
+}
+
+@keyframes ticker {
+  0% { transform: translateX(100%); }
+  100% { transform: translateX(-100%); }
+}
+
+/* High Contrast Mode */
+.high-contrast {
+  --background: 0 0% 0%;
+  --foreground: 0 0% 100%;
+  --card: 0 0% 10%;
+  --card-foreground: 0 0% 100%;
+  --border: 0 0% 50%;
+  --primary: 60 100% 50%;
+  --primary-foreground: 0 0% 0%;
+  --secondary: 240 100% 50%;
+  --secondary-foreground: 0 0% 100%;
+}
