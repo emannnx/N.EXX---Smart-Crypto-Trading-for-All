@@ -5,6 +5,7 @@ import CryptoTicker from "@/components/CryptoTicker";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import heroProfessional from "@/assets/hero-professional.jpg";
+import Hoddie from "../assets/Hoddie.png"
 
 const Index = () => {
   const pillars = [
@@ -58,11 +59,27 @@ const Index = () => {
   return (
     <Layout>
       {/* Hero Section */}
-      <section
-        className="relative pt-24 pb-12 overflow-hidden flex items-center justify-center"
-        style={{ height: "90vh" }}
-      >
-        <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-transparent to-secondary/10" />
+        <style>{`
+        .hero-section {
+          position: relative;
+          padding-top: 6rem;
+          padding-bottom: 3rem;
+          overflow: hidden;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          height: 95vh;
+          min-height: 600px;
+        }
+        @media (max-width: 1031px) {
+          .hero-section {
+            height: auto;
+            min-height: 0;
+          }
+        }
+      `}</style>
+         <section className="hero-section" id="hero">
+          <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-transparent to-secondary/10" />
         <div className="container mx-auto px-4 relative z-10 flex flex-col items-center justify-center h-full">
           <div className="grid lg:grid-cols-2 gap-12 items-center justify-center w-full">
             <motion.div
@@ -95,21 +112,22 @@ const Index = () => {
               </div>
             </motion.div>
 
-            <motion.div
-              initial={{ opacity: 0, x: 50 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
-              className="relative flex justify-center"
-            >
-              <div className="relative rounded-2xl overflow-hidden shadow-2xl flex justify-center">
-                <img
-                  src={heroProfessional}
-                  alt="Professional crypto trader using modern trading dashboard"
-                  className="w-full h-auto max-w-md"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-background/20 via-transparent to-transparent" />
-              </div>
-            </motion.div>
+          <motion.div
+  initial={{ opacity: 0, x: 50 }}
+  animate={{ opacity: 1, x: 0 }}
+  transition={{ duration: 0.8, delay: 0.2 }}
+  className="relative flex justify-center"
+>
+  <div className="relative rounded-2xl overflow-hidden shadow-2xl flex justify-center">
+    <img
+      src={Hoddie}
+      alt="Professional crypto trader using modern trading dashboard"
+      className="w-full max-w-md object-cover"
+      style={{ height: "32rem" }} // 2x typical h-64 (16rem)
+    />
+    <div className="absolute inset-0 bg-gradient-to-t from-background/20 via-transparent to-transparent" />
+  </div>
+</motion.div>
           </div>
         </div>
       </section>

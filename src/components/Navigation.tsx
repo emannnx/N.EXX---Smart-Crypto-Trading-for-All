@@ -54,9 +54,11 @@ const Navigation = () => {
                 )}
               </Link>
             ))}
+           <a href="https://wa.me/27728897818?text=Hello%20N.EXX%2C%20I%20would%20like%20to%20know%20more%20about%20your%20crypto%20services.">
             <Button variant="default" className="neon-glow">
               Get Started
             </Button>
+           </a>
           </div>
 
           {/* Mobile menu button */}
@@ -95,9 +97,11 @@ const Navigation = () => {
                 </Link>
               ))}
               <div className="pt-2">
-                <Button variant="default" className="w-full neon-glow">
-                  Get Started
-                </Button>
+           <a href="https://wa.me/27728897818?text=Hello%20N.EXX%2C%20I%20would%20like%20to%20know%20more%20about%20your%20crypto%20services.">
+            <Button variant="default" className="full neon-glow">
+              Get Started
+            </Button>
+           </a>
               </div>
             </div>
           </motion.div>

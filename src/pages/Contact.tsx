@@ -8,9 +8,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { toast } from "@/hooks/use-toast";
-import contactSupport from "@/assets/contact-support.jpg";
-import contactimage from "../assets/contact.png"
-import emailjs from "emailjs-com";
+import contactimage from "../assets/contact.png";
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -20,39 +18,37 @@ const Contact = () => {
     message: "",
   });
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
 
-    emailjs.send(
-      "YOUR_SERVICE_ID",      // from EmailJS dashboard
-      "YOUR_TEMPLATE_ID",     // from EmailJS dashboard
-      {
-        from_name: formData.name,
-        from_email: formData.email,
-        subject: formData.subject,
-        message: formData.message,
-      },
-      "YOUR_USER_ID"          // public key from EmailJS dashboard
-    )
-    .then(() => {
-      toast({
-        title: "Message Sent!",
-        description: "We'll get back to you within 24 hours.",
+    try {
+      const response = await fetch("https://formspree.io/f/xzzvvezd", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData),
       });
-      setFormData({ name: "", email: "", subject: "", message: "" });
-    })
-    .catch(() => {
+
+      if (response.ok) {
+        toast({
+          title: "Message Sent!",
+          description: "We'll get back to you within 24 hours.",
+        });
+        setFormData({ name: "", email: "", subject: "", message: "" });
+      } else {
+        throw new Error("Failed to send");
+      }
+    } catch (error) {
       toast({
         title: "Error",
         description: "Failed to send message. Please try again later.",
       });
-    });
+    }
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setFormData(prev => ({
       ...prev,
-      [e.target.name]: e.target.value
+      [e.target.name]: e.target.value,
     }));
   };
 
@@ -81,7 +77,7 @@ const Contact = () => {
     <Layout>
       {/* Contact Header */}
       <section className="pt-24 pb-8 w-full max-w-full overflow-x-hidden bg-gradient-to-br from-primary/5 via-background to-secondary/5">
-        <div className="container mx-auto px-4 w-full max-w-full flex flex-col items-center">
+        <div className="container mx-auto px-4 flex flex-col items-center">
           <motion.div
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
@@ -113,7 +109,7 @@ const Contact = () => {
 
       {/* Contact Info Cards */}
       <section className="py-8 w-full max-w-full overflow-x-hidden bg-muted/50">
-        <div className="container mx-auto px-4 w-full max-w-full">
+        <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
             {contactInfo.map((info) => (
               <Card key={info.title} className="text-center h-full hover:shadow-lg transition-all duration-300">
@@ -139,7 +135,7 @@ const Contact = () => {
 
       {/* Contact Form & Quick Help */}
       <section className="py-16 w-full max-w-full overflow-x-hidden">
-        <div className="container mx-auto px-4 w-full max-w-full">
+        <div className="container mx-auto px-4">
           <div className="flex flex-col lg:flex-row gap-12">
             {/* Contact Form */}
             <motion.div
@@ -214,14 +210,13 @@ const Contact = () => {
               </Card>
             </motion.div>
 
-            {/* Quick Help & Info */}
+            {/* Quick Help */}
             <motion.div
               initial={{ opacity: 0, x: 50 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8 }}
               className="w-full lg:w-1/3 space-y-8"
             >
-              {/* WhatsApp Card */}
               <Card className="bg-green-500/10 border-green-500/20">
                 <CardHeader>
                   <div className="flex items-center space-x-4">
@@ -240,7 +235,7 @@ const Contact = () => {
                   </p>
                   <Button
                     className="w-full bg-green-500 hover:bg-green-600 text-white"
-                    onClick={() => window.open("https://wa.me/2348000000000", "_blank")}
+                    onClick={() => window.open("https://wa.me/27728897818?text=Hello%20N.EXX™%2C%20I%20would%20like%20to%20know%20more%20about%20your%20crypto%20services.", "_blank")}
                   >
                     <MessageCircle className="mr-2 h-4 w-4" />
                     Chat on WhatsApp
@@ -248,7 +243,6 @@ const Contact = () => {
                 </CardContent>
               </Card>
 
-              {/* Office Hours */}
               <Card>
                 <CardHeader>
                   <CardTitle>Office Hours</CardTitle>

@@ -3,6 +3,7 @@ import { Target, Eye, Award, Users } from "lucide-react";
 import Layout from "@/components/Layout";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import aboutOffice from "@/assets/about-office.jpg";
+import AboutCap from "../assets/AboutCapN.nexx.png"
 
 const About = () => {
   const milestones = [
@@ -61,7 +62,7 @@ const About = () => {
             className="w-full flex justify-center mt-8"
           >
             <img
-              src={aboutOffice}
+              src={AboutCap}
               alt="Modern tech office environment"
               className="rounded-2xl shadow-lg w-full max-w-2xl object-cover"
               style={{ aspectRatio: "16/7" }}
