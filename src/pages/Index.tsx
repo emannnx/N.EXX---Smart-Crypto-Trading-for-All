@@ -82,13 +82,13 @@ const Index = () => {
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Button size="lg" className="neon-glow text-lg px-8 py-3">
-                  Get Started
+                  Trade Now
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </Button>
-                <Button variant="secondary" size="lg" className="text-lg px-8 py-3">
+                {/* <Button variant="secondary" size="lg" className="text-lg px-8 py-3">
                   Trade Now 
                   <ArrowRight className="ml-2 h-5 w-5" />
-                </Button>
+                </Button> */}
               </div>
             </motion.div>
 
