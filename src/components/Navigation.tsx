@@ -28,7 +28,7 @@ const Navigation = () => {
               style={{ display: 'flex', alignItems: 'center',width: 120,justifyContent: "space-between" }}
             >
               <img src={Logo} alt="" style={{height: 40}} />
-              N.EXX
+              N.EXX <span style={{fontSize:10, color:"#B8E600"}}> tm</span>
             </motion.div>
           </Link>
 

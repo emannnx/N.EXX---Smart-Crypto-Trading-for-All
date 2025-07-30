@@ -74,7 +74,7 @@ const Index = () => {
               <h1 className="text-5xl md:text-7xl font-bold mb-6">
                 Trade Wisely.{" "}
                 <span className="text-transparent bg-clip-text gradient-primary">
-                  Do it with N.EXX
+                  Do it with N.EXX <span style={{fontSize:10}}>tm</span>
                 </span>
               </h1>
               <p className="text-xl md:text-2xl text-muted-foreground mb-8">
@@ -169,7 +169,7 @@ const Index = () => {
             className="text-center mb-16"
           >
             <h2 className="text-4xl md:text-5xl font-bold mb-4">
-              Why Choose <span className="text-primary">N.EXX</span>
+              Why Choose <span className="text-primary">N.EXX <span style={{fontSize:10}}>tm</span></span>
             </h2>
             <p className="text-xl text-muted-foreground">
               Built on three core principles that drive our platform
@@ -243,7 +243,7 @@ const Index = () => {
 
             <div className="bg-card p-8 rounded-lg max-w-2xl mx-auto">
               <p className="text-lg italic mb-4">
-                "N.EXX made crypto trading so simple for me. The platform is intuitive and the customer service is outstanding!"
+                "N.EXX <span style={{fontSize:10}}>tm</span> made crypto trading so simple for me. The platform is intuitive and the customer service is outstanding!"
               </p>
               <div className="flex items-center justify-center">
                 <div className="w-12 h-12 bg-primary rounded-full flex items-center justify-center text-primary-foreground font-bold mr-4">
@@ -264,7 +264,7 @@ const Index = () => {
         <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-4 gap-8">
             <div>
-              <h3 className="text-2xl font-bold text-primary mb-4">N.EXX</h3>
+              <h3 className="text-2xl font-bold text-primary mb-4">N.EXX <span style={{fontSize:10}}>tm</span></h3>
               <p className="text-muted-foreground mb-4">
                 Smart crypto trading for everyone. Simple, secure, and sweet.
               </p>
@@ -306,7 +306,7 @@ const Index = () => {
           </div>
           
           <div className="border-t border-border mt-8 pt-8 text-center text-muted-foreground">
-            <p>&copy; 2024 N.EXX. All rights reserved.</p>
+            <p>&copy; 2024 N.EXX <span style={{fontSize:10}}>tm</span>. All rights reserved.</p>
           </div>
         </div>
       </footer>

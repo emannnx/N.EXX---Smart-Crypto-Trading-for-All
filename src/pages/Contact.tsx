@@ -57,83 +57,71 @@ const Contact = () => {
 
   return (
     <Layout>
-      {/* Hero Section */}
-      <section className="pt-24 pb-12">
-        <div className="container mx-auto px-4">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <motion.div
-              initial={{ opacity: 0, x: -50 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8 }}
-              className="text-center lg:text-left"
-            >
-              <h1 className="text-5xl md:text-6xl font-bold mb-6">
-                Talk to <span className="text-transparent bg-clip-text gradient-primary">Us</span>
-              </h1>
-              <p className="text-xl text-muted-foreground">
-                Have questions? We're here to help. Reach out to us anytime.
-              </p>
-            </motion.div>
-            
-            <motion.div
-              initial={{ opacity: 0, x: 50 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
-              className="relative"
-            >
-              <div className="relative rounded-2xl overflow-hidden shadow-2xl">
-                <img 
-                  src={contactSupport} 
-                  alt="Professional customer support representative ready to help"
-                  className="w-full h-auto"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-background/20 via-transparent to-transparent" />
-              </div>
-            </motion.div>
-          </div>
+      {/* Contact Header */}
+      <section className="pt-24 pb-8 w-full max-w-full overflow-x-hidden bg-gradient-to-br from-primary/5 via-background to-secondary/5">
+        <div className="container mx-auto px-4 w-full max-w-full flex flex-col items-center">
+          <motion.div
+            initial={{ opacity: 0, y: 40 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.7 }}
+            className="text-center max-w-2xl mx-auto"
+          >
+            <h1 className="text-4xl md:text-6xl font-bold mb-3">
+              Contact <span className="text-primary">N.EXX <span style={{fontSize:10}}>tm</span></span>
+            </h1>
+            <p className="text-lg md:text-xl text-muted-foreground mb-6">
+              We’re here to help. Reach out to us for support, questions, or feedback.
+            </p>
+          </motion.div>
+          <motion.div
+            initial={{ opacity: 0, scale: 0.95 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+            className="w-full flex justify-center mt-6"
+          >
+            <img
+              src={contactSupport}
+              alt="N.EXX <span style={{fontSize:10}}>tm</span> support team"
+              className="rounded-2xl shadow-lg w-full max-w-xl object-cover"
+              style={{ aspectRatio: "16/7" }}
+            />
+          </motion.div>
         </div>
       </section>
 
       {/* Contact Info Cards */}
-      <section className="py-12">
-        <div className="container mx-auto px-4">
-          <div className="grid md:grid-cols-3 gap-6 mb-16">
-            {contactInfo.map((info, index) => (
-              <motion.div
-                key={info.title}
-                initial={{ opacity: 0, y: 50 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                whileHover={{ scale: 1.05 }}
-              >
-                <Card className="text-center h-full hover:shadow-lg transition-all duration-300">
-                  <CardHeader>
-                    <div className={`w-16 h-16 mx-auto rounded-full bg-card border flex items-center justify-center ${info.color}`}>
-                      <info.icon className="h-8 w-8" />
-                    </div>
-                    <CardTitle>{info.title}</CardTitle>
-                  </CardHeader>
-                  <CardContent>
-                    <CardDescription className="text-lg font-medium text-foreground">
-                      {info.details}
-                    </CardDescription>
-                  </CardContent>
-                </Card>
-              </motion.div>
+      <section className="py-8 w-full max-w-full overflow-x-hidden bg-muted/50">
+        <div className="container mx-auto px-4 w-full max-w-full">
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
+            {contactInfo.map((info) => (
+              <Card key={info.title} className="text-center h-full hover:shadow-lg transition-all duration-300">
+                <CardHeader>
+                  <div className={`w-12 h-12 mx-auto rounded-full bg-card border flex items-center justify-center ${info.color}`}>
+                    <info.icon className="h-6 w-6" />
+                  </div>
+                  <CardTitle className="text-base mt-2">{info.title}</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <CardDescription className="text-sm font-medium text-foreground">
+                    {info.details}
+                  </CardDescription>
+                </CardContent>
+              </Card>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Contact Form & WhatsApp */}
-      <section className="py-20 bg-muted/50">
-        <div className="container mx-auto px-4">
-          <div className="grid lg:grid-cols-2 gap-12">
+      {/* Contact Form & Quick Help */}
+      <section className="py-16 w-full max-w-full overflow-x-hidden">
+        <div className="container mx-auto px-4 w-full max-w-full">
+          <div className="flex flex-col lg:flex-row gap-12">
             {/* Contact Form */}
             <motion.div
               initial={{ opacity: 0, x: -50 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8 }}
+              className="w-full lg:w-2/3"
             >
               <Card>
                 <CardHeader>
@@ -169,7 +157,6 @@ const Contact = () => {
                         />
                       </div>
                     </div>
-                    
                     <div>
                       <Label htmlFor="subject">Subject</Label>
                       <Input
@@ -181,7 +168,6 @@ const Contact = () => {
                         required
                       />
                     </div>
-                    
                     <div>
                       <Label htmlFor="message">Message</Label>
                       <Textarea
@@ -194,7 +180,6 @@ const Contact = () => {
                         required
                       />
                     </div>
-                    
                     <Button type="submit" size="lg" className="w-full neon-glow">
                       Send Message
                       <Send className="ml-2 h-5 w-5" />
@@ -204,12 +189,12 @@ const Contact = () => {
               </Card>
             </motion.div>
 
-            {/* WhatsApp & Quick Contact */}
+            {/* Quick Help & Info */}
             <motion.div
               initial={{ opacity: 0, x: 50 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8 }}
-              className="space-y-8"
+              className="w-full lg:w-1/3 space-y-8"
             >
               {/* WhatsApp Card */}
               <Card className="bg-green-500/10 border-green-500/20">
@@ -228,7 +213,7 @@ const Contact = () => {
                   <p className="text-muted-foreground mb-4">
                     Need immediate assistance? Chat with our support team on WhatsApp for real-time help.
                   </p>
-                  <Button 
+                  <Button
                     className="w-full bg-green-500 hover:bg-green-600 text-white"
                     onClick={() => window.open("https://wa.me/2348000000000", "_blank")}
                   >
@@ -264,25 +249,6 @@ const Contact = () => {
                       <strong>Emergency Support:</strong> Our WhatsApp support is available 24/7 for urgent trading issues.
                     </p>
                   </div>
-                </CardContent>
-              </Card>
-
-              {/* Location Card */}
-              <Card>
-                <CardHeader>
-                  <CardTitle>Our Location</CardTitle>
-                  <CardDescription>Find us in Lagos, Nigeria</CardDescription>
-                </CardHeader>
-                <CardContent>
-                  <div className="aspect-video bg-muted rounded-lg flex items-center justify-center mb-4">
-                    <div className="text-center">
-                      <MapPin className="h-12 w-12 text-primary mx-auto mb-2" />
-                      <p className="text-sm text-muted-foreground">Interactive map coming soon</p>
-                    </div>
-                  </div>
-                  <p className="text-sm text-muted-foreground">
-                    We're located in the heart of Lagos, making us easily accessible for in-person consultations.
-                  </p>
                 </CardContent>
               </Card>
             </motion.div>

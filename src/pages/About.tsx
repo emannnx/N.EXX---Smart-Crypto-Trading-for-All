@@ -6,29 +6,29 @@ import aboutOffice from "@/assets/about-office.jpg";
 
 const About = () => {
   const milestones = [
-    { year: "2023", title: "Founded", description: "N.EXX was born with a vision to simplify crypto trading" },
-    { year: "2024", title: "Growth", description: "Reached 1,000+ satisfied customers" },
-    { year: "2024", title: "Expansion", description: "Launched multiple cryptocurrency trading pairs" },
-    { year: "2024", title: "Trust", description: "Processed over $1M in crypto trades" },
+    { year: "2023", title: "Founded", description: "N.EXX <span style={{fontSize:10}}>tm</span> was born with a vision to simplify crypto trading." },
+    { year: "2024", title: "Growth", description: "Reached 1,000+ satisfied customers." },
+    { year: "2024", title: "Expansion", description: "Launched multiple cryptocurrency trading pairs." },
+    { year: "2024", title: "Trust", description: "Processed over $1M in crypto trades." },
   ];
 
   const values = [
     {
       icon: Target,
       title: "Transparency",
-      description: "Clear pricing, no hidden fees, complete honesty in all our dealings",
+      description: "Clear pricing, no hidden fees, and complete honesty in all our dealings.",
       color: "text-nexx-neon-green",
     },
     {
       icon: Users,
       title: "Speed",
-      description: "Lightning-fast transactions and instant customer support responses",
+      description: "Lightning-fast transactions and instant customer support responses.",
       color: "text-nexx-neon-yellow",
     },
     {
       icon: Award,
       title: "Trust",
-      description: "Building lasting relationships through reliable and secure services",
+      description: "Building lasting relationships through reliable and secure services.",
       color: "text-nexx-gold",
     },
   ];
@@ -36,163 +36,125 @@ const About = () => {
   return (
     <Layout>
       {/* Hero Section */}
-      <section className="pt-24 pb-12">
-        <div className="container mx-auto px-4">
+      <section className="pt-24 pb-12 w-full max-w-full overflow-x-hidden bg-gradient-to-br from-primary/5 via-background to-secondary/5">
+        <div className="container mx-auto px-4 w-full max-w-full flex flex-col items-center">
           <motion.div
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="text-center max-w-4xl mx-auto"
+            className="text-center max-w-2xl mx-auto"
           >
-            <h1 className="text-5xl md:text-6xl font-bold mb-6">
-              Who <span className="text-transparent bg-clip-text gradient-primary">We Are</span>
+            <h1 className="text-4xl md:text-6xl font-bold mb-4 leading-tight">
+              <span className="block text-primary">About N.EXX <span style={{fontSize:10}}>tm</span></span>
+              <span className="text-2xl md:text-3xl font-normal text-muted-foreground mt-2 block">
+                Simple. Secure. For Everyone.
+              </span>
             </h1>
-            <p className="text-xl text-muted-foreground">
-              We're on a mission to make cryptocurrency trading accessible, simple, and secure for everyone.
+            <p className="text-lg md:text-xl text-muted-foreground mb-6">
+              We’re on a mission to make cryptocurrency trading accessible, simple, and secure for everyone.
             </p>
           </motion.div>
-        </div>
-      </section>
-
-      {/* Brand Introduction */}
-      <section className="py-20">
-        <div className="container mx-auto px-4">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <motion.div
-              initial={{ opacity: 0, x: -50 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8 }}
-            >
-              <h2 className="text-4xl font-bold mb-6">Our Story</h2>
-              <p className="text-lg text-muted-foreground mb-6">
-                N.EXX was founded with a simple belief: cryptocurrency trading shouldn't be complicated. 
-                In a world where digital assets are becoming increasingly important, we saw the need for 
-                a platform that bridges the gap between traditional finance and the crypto economy.
-              </p>
-              <p className="text-lg text-muted-foreground mb-6">
-                Our team of financial experts and tech innovators came together to create a platform 
-                that prioritizes user experience above all else. We believe that everyone deserves 
-                access to the opportunities that cryptocurrency provides.
-              </p>
-            </motion.div>
-            
-            <motion.div
-              initial={{ opacity: 0, x: 50 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8 }}
-              className="relative"
-            >
-              <div className="relative rounded-2xl overflow-hidden shadow-2xl">
-                <img 
-                  src={aboutOffice} 
-                  alt="Modern tech office environment with clean design"
-                  className="w-full h-auto"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-background/40 via-transparent to-transparent" />
-                <div className="absolute bottom-6 left-6 right-6">
-                  <div className="text-4xl font-bold text-white drop-shadow-lg">N.EXX</div>
-                  <p className="text-white/90 text-lg drop-shadow-md">Building the future of crypto trading</p>
-                </div>
-              </div>
-            </motion.div>
-          </div>
+          <motion.div
+            initial={{ opacity: 0, scale: 0.95 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+            className="w-full flex justify-center mt-8"
+          >
+            <img
+              src={aboutOffice}
+              alt="Modern tech office environment"
+              className="rounded-2xl shadow-lg w-full max-w-2xl object-cover"
+              style={{ aspectRatio: "16/7" }}
+            />
+          </motion.div>
         </div>
       </section>
 
       {/* Mission & Vision */}
-      <section className="py-20 bg-muted/50">
-        <div className="container mx-auto px-4">
-          <div className="grid md:grid-cols-2 gap-8">
+      <section className="py-16 w-full max-w-full overflow-x-hidden bg-muted/50">
+        <div className="container mx-auto px-4 w-full max-w-full">
+          <motion.div
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.7 }}
+            className="text-center mb-12"
+          >
+            <h2 className="text-3xl md:text-4xl font-bold mb-2">
+              Our <span className="text-primary">Mission & Vision</span>
+            </h2>
+            <p className="text-lg text-muted-foreground">
+              What drives us at N.EXX <span style={{fontSize:10}}>tm</span>
+            </p>
+          </motion.div>
+          <div className="flex flex-col md:flex-row gap-8 items-stretch justify-center">
             <motion.div
-              initial={{ opacity: 0, y: 50 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
+              initial={{ opacity: 0, x: -40 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.7 }}
+              className="flex-1"
             >
-              <Card className="h-full">
-                <CardHeader>
-                  <div className="w-16 h-16 bg-primary/20 rounded-full flex items-center justify-center mb-4">
-                    <Target className="h-8 w-8 text-primary" />
-                  </div>
-                  <CardTitle className="text-2xl">Our Mission</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <CardDescription className="text-lg">
-                    To democratize cryptocurrency trading by providing a simple, secure, and 
-                    accessible platform that empowers individuals to participate in the digital 
-                    economy with confidence and ease.
-                  </CardDescription>
-                </CardContent>
+              <Card className="h-full flex flex-col items-center text-center p-6 shadow-md hover:shadow-lg transition-shadow duration-300">
+                <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-4">
+                  <Target className="h-8 w-8 text-primary" />
+                </div>
+                <CardTitle className="text-2xl mb-2">Our Mission</CardTitle>
+                <CardDescription className="text-base mb-2">
+                  To democratize cryptocurrency trading by providing a simple, secure, and accessible platform that empowers individuals to participate in the digital economy with confidence and ease.
+                </CardDescription>
               </Card>
             </motion.div>
-
             <motion.div
-              initial={{ opacity: 0, y: 50 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
+              initial={{ opacity: 0, x: 40 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.7, delay: 0.1 }}
+              className="flex-1"
             >
-              <Card className="h-full">
-                <CardHeader>
-                  <div className="w-16 h-16 bg-secondary/20 rounded-full flex items-center justify-center mb-4">
-                    <Eye className="h-8 w-8 text-secondary" />
-                  </div>
-                  <CardTitle className="text-2xl">Our Vision</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <CardDescription className="text-lg">
-                    To become the leading cryptocurrency trading platform in Nigeria and beyond, 
-                    known for our commitment to user experience, security, and innovation in the 
-                    digital asset space.
-                  </CardDescription>
-                </CardContent>
+              <Card className="h-full flex flex-col items-center text-center p-6 shadow-md hover:shadow-lg transition-shadow duration-300">
+                <div className="w-16 h-16 bg-secondary/10 rounded-full flex items-center justify-center mb-4">
+                  <Eye className="h-8 w-8 text-secondary" />
+                </div>
+                <CardTitle className="text-2xl mb-2">Our Vision</CardTitle>
+                <CardDescription className="text-base mb-2">
+                  To become the leading cryptocurrency trading platform in Nigeria and beyond, known for our commitment to user experience, security, and innovation in the digital asset space.
+                </CardDescription>
               </Card>
             </motion.div>
           </div>
         </div>
       </section>
 
-      {/* Timeline */}
-      <section className="py-20">
-        <div className="container mx-auto px-4">
+      {/* Timeline / Milestones */}
+      <section className="py-16 w-full max-w-full overflow-x-hidden">
+        <div className="container mx-auto px-4 w-full max-w-full">
           <motion.div
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="text-center mb-16"
+            className="text-center mb-12"
           >
-            <h2 className="text-4xl md:text-5xl font-bold mb-4">
+            <h2 className="text-3xl md:text-4xl font-bold mb-2">
               Our <span className="text-accent">Journey</span>
             </h2>
-            <p className="text-xl text-muted-foreground">
+            <p className="text-lg text-muted-foreground">
               Key milestones in our company's growth
             </p>
           </motion.div>
-
-          <div className="max-w-4xl mx-auto">
+          <div className="flex flex-col gap-8 max-w-2xl mx-auto">
             {milestones.map((milestone, index) => (
               <motion.div
-                key={milestone.year}
-                initial={{ opacity: 0, x: index % 2 === 0 ? -50 : 50 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.2 }}
-                className={`flex items-center mb-12 ${
-                  index % 2 === 0 ? 'flex-row' : 'flex-row-reverse'
-                }`}
+                key={milestone.year + milestone.title}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                className="flex items-center gap-4"
               >
-                <div className="flex-1">
-                  <Card>
-                    <CardHeader>
-                      <CardTitle className="text-primary">{milestone.year}</CardTitle>
-                      <CardDescription className="text-xl font-semibold text-foreground">
-                        {milestone.title}
-                      </CardDescription>
-                    </CardHeader>
-                    <CardContent>
-                      <p className="text-muted-foreground">{milestone.description}</p>
-                    </CardContent>
-                  </Card>
+                <div className="flex-shrink-0 w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center text-primary font-bold text-lg border border-primary">
+                  {milestone.year}
                 </div>
-                <div className="w-8 h-8 bg-primary rounded-full mx-8 flex-shrink-0"></div>
-                <div className="flex-1"></div>
+                <div>
+                  <div className="font-semibold text-primary">{milestone.title}</div>
+                  <div className="text-muted-foreground text-base">{milestone.description}</div>
+                </div>
               </motion.div>
             ))}
           </div>
@@ -200,40 +162,39 @@ const About = () => {
       </section>
 
       {/* Company Values */}
-      <section className="py-20 bg-muted/50">
-        <div className="container mx-auto px-4">
+      <section className="py-16 bg-muted/50 w-full max-w-full overflow-x-hidden">
+        <div className="container mx-auto px-4 w-full max-w-full">
           <motion.div
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="text-center mb-16"
+            className="text-center mb-12"
           >
-            <h2 className="text-4xl md:text-5xl font-bold mb-4">
+            <h2 className="text-3xl md:text-4xl font-bold mb-2">
               Our <span className="text-primary">Values</span>
             </h2>
-            <p className="text-xl text-muted-foreground">
+            <p className="text-lg text-muted-foreground">
               The principles that guide everything we do
             </p>
           </motion.div>
-
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-3 gap-6">
             {values.map((value, index) => (
               <motion.div
                 key={value.title}
-                initial={{ opacity: 0, y: 50 }}
+                initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.2 }}
-                whileHover={{ y: -10 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                whileHover={{ y: -6 }}
               >
                 <Card className="h-full text-center hover:shadow-lg transition-all duration-300">
                   <CardHeader>
-                    <div className={`w-16 h-16 mx-auto rounded-full bg-card border flex items-center justify-center ${value.color}`}>
-                      <value.icon className="h-8 w-8" />
+                    <div className={`w-14 h-14 mx-auto rounded-full bg-card border flex items-center justify-center ${value.color}`}>
+                      <value.icon className="h-7 w-7" />
                     </div>
-                    <CardTitle className="text-2xl">{value.title}</CardTitle>
+                    <CardTitle className="text-xl">{value.title}</CardTitle>
                   </CardHeader>
                   <CardContent>
-                    <CardDescription className="text-lg">
+                    <CardDescription className="text-base">
                       {value.description}
                     </CardDescription>
                   </CardContent>
