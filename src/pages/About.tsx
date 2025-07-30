@@ -6,7 +6,7 @@ import aboutOffice from "@/assets/about-office.jpg";
 
 const About = () => {
   const milestones = [
-    { year: "2023", title: "Founded", description: "N.EXX <span style={{fontSize:10}}>tm</span> was born with a vision to simplify crypto trading." },
+    { year: "2023", title: "Founded", description: "N.EXX™ was born with a vision to simplify crypto trading." },
     { year: "2024", title: "Growth", description: "Reached 1,000+ satisfied customers." },
     { year: "2024", title: "Expansion", description: "Launched multiple cryptocurrency trading pairs." },
     { year: "2024", title: "Trust", description: "Processed over $1M in crypto trades." },
@@ -45,7 +45,7 @@ const About = () => {
             className="text-center max-w-2xl mx-auto"
           >
             <h1 className="text-4xl md:text-6xl font-bold mb-4 leading-tight">
-              <span className="block text-primary">About N.EXX <span style={{fontSize:10}}>tm</span></span>
+              <span className="block text-primary">About N.EXX™ </span>
               <span className="text-2xl md:text-3xl font-normal text-muted-foreground mt-2 block">
                 Simple. Secure. For Everyone.
               </span>
@@ -83,7 +83,7 @@ const About = () => {
               Our <span className="text-primary">Mission & Vision</span>
             </h2>
             <p className="text-lg text-muted-foreground">
-              What drives us at N.EXX <span style={{fontSize:10}}>tm</span>
+              What drives us at N.EXX™ 
             </p>
           </motion.div>
           <div className="flex flex-col md:flex-row gap-8 items-stretch justify-center">

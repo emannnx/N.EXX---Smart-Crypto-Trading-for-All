@@ -74,11 +74,14 @@ const Index = () => {
               <h1 className="text-5xl md:text-7xl font-bold mb-6">
                 Trade Wisely.{" "}
                 <span className="text-transparent bg-clip-text gradient-primary">
-                  Do it with N.EXX <span style={{fontSize:10}}>tm</span>
+                  Do it with N.EXX™ 
                 </span>
               </h1>
-              <p className="text-xl md:text-2xl text-muted-foreground mb-8">
+              <p className="text-xl md:text-2xl text-muted-foreground mb-4">
                 We make crypto trading simple, secure, and sweet.
+              </p>
+              <p className="text-lg md:text-xl text-primary font-semibold mb-8">
+                At N.EXX™, you can now easily convert your crypto to Naira 🇳🇬 and Rands 🇿🇦 – fast, secure, and hassle-free!
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Button size="lg" className="neon-glow text-lg px-8 py-3">
@@ -169,7 +172,7 @@ const Index = () => {
             className="text-center mb-16"
           >
             <h2 className="text-4xl md:text-5xl font-bold mb-4">
-              Why Choose <span className="text-primary">N.EXX <span style={{fontSize:10}}>tm</span></span>
+              Why Choose <span className="text-primary">N.EXX™</span>
             </h2>
             <p className="text-xl text-muted-foreground">
               Built on three core principles that drive our platform
@@ -243,14 +246,14 @@ const Index = () => {
 
             <div className="bg-card p-8 rounded-lg max-w-2xl mx-auto">
               <p className="text-lg italic mb-4">
-                "N.EXX <span style={{fontSize:10}}>tm</span> made crypto trading so simple for me. The platform is intuitive and the customer service is outstanding!"
+                "N.EXX™ made crypto trading so simple for me. The platform is intuitive and the customer service is outstanding!"
               </p>
               <div className="flex items-center justify-center">
                 <div className="w-12 h-12 bg-primary rounded-full flex items-center justify-center text-primary-foreground font-bold mr-4">
-                  JD
+                  AO
                 </div>
                 <div>
-                  <p className="font-semibold">John Doe</p>
+                  <p className="font-semibold">Akinnusi Oluwanifemi</p>
                   <p className="text-sm text-muted-foreground">Verified Trader</p>
                 </div>
               </div>
@@ -264,14 +267,19 @@ const Index = () => {
         <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-4 gap-8">
             <div>
-              <h3 className="text-2xl font-bold text-primary mb-4">N.EXX <span style={{fontSize:10}}>tm</span></h3>
+              <h3 className="text-2xl font-bold text-primary mb-4">N.EXX™</h3>
               <p className="text-muted-foreground mb-4">
                 Smart crypto trading for everyone. Simple, secure, and sweet.
               </p>
               <div className="flex space-x-4">
-                <Button variant="outline" size="sm">WhatsApp</Button>
-                <Button variant="outline" size="sm">Instagram</Button>
-                <Button variant="outline" size="sm">Twitter</Button>
+                <a href="https://www.instagram.com/nexx_global?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="><Button variant="outline" size="sm">Instagram</Button></a>
+                <a
+                  href="https://wa.me/27728897818?text=Hello%20N.EXX™%2C%20I%20would%20like%20to%20know%20more%20about%20your%20crypto%20services."
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <Button variant="outline" size="sm">WhatsApp</Button>
+                </a>
               </div>
             </div>
             
@@ -298,15 +306,14 @@ const Index = () => {
             <div>
               <h4 className="font-semibold mb-4">Contact Info</h4>
               <ul className="space-y-2 text-muted-foreground">
-                <li>Lagos, Nigeria</li>
-                <li>support@nexx.com</li>
-                <li>+234 800 000 0000</li>
+                <li>Admin@nexxglobal.net</li>
+                <li>‪+27728897818‬</li>
               </ul>
             </div>
           </div>
           
           <div className="border-t border-border mt-8 pt-8 text-center text-muted-foreground">
-            <p>&copy; 2024 N.EXX <span style={{fontSize:10}}>tm</span>. All rights reserved.</p>
+            <p>&copy; 2024 N.EXX™.  All rights reserved.</p>
           </div>
         </div>
       </footer>

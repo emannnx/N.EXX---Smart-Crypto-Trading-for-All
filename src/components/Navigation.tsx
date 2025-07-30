@@ -25,10 +25,10 @@ const Navigation = () => {
             <motion.div
               whileHover={{ scale: 1.05 }}
               className="text-2xl font-bold "
-              style={{ display: 'flex', alignItems: 'center',width: 120,justifyContent: "space-between" }}
+              style={{ display: 'flex', alignItems: 'center',width: 130,justifyContent: "space-between" }}
             >
               <img src={Logo} alt="" style={{height: 40}} />
-              N.EXX <span style={{fontSize:10, color:"#B8E600"}}> tm</span>
+              N.EXX™
             </motion.div>
           </Link>
 

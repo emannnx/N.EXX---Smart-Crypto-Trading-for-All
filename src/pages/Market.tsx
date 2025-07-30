@@ -315,7 +315,7 @@ const Market = () => {
                 Contact Us to Trade
               </motion.a>
               <motion.a
-                href="https://wa.me/2348000000000"
+                href="https://wa.me/27728897818?text=Hello%20N.EXX%2C%20I%20would%20like%20to%20know%20more%20about%20your%20crypto%20services."
                 target="_blank"
                 rel="noopener noreferrer"
                 whileHover={{ scale: 1.05 }}

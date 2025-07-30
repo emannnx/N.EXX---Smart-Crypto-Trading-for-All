@@ -9,6 +9,8 @@ import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { toast } from "@/hooks/use-toast";
 import contactSupport from "@/assets/contact-support.jpg";
+import contactimage from "../assets/contact.png"
+import emailjs from "emailjs-com";
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -20,11 +22,31 @@ const Contact = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    toast({
-      title: "Message Sent!",
-      description: "We'll get back to you within 24 hours.",
+
+    emailjs.send(
+      "YOUR_SERVICE_ID",      // from EmailJS dashboard
+      "YOUR_TEMPLATE_ID",     // from EmailJS dashboard
+      {
+        from_name: formData.name,
+        from_email: formData.email,
+        subject: formData.subject,
+        message: formData.message,
+      },
+      "YOUR_USER_ID"          // public key from EmailJS dashboard
+    )
+    .then(() => {
+      toast({
+        title: "Message Sent!",
+        description: "We'll get back to you within 24 hours.",
+      });
+      setFormData({ name: "", email: "", subject: "", message: "" });
+    })
+    .catch(() => {
+      toast({
+        title: "Error",
+        description: "Failed to send message. Please try again later.",
+      });
     });
-    setFormData({ name: "", email: "", subject: "", message: "" });
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -44,13 +66,13 @@ const Contact = () => {
     {
       icon: Mail,
       title: "Email",
-      details: "support@nexx.com",
+      details: "Admin@nexxglobal.net",
       color: "text-nexx-neon-yellow",
     },
     {
       icon: Phone,
       title: "Phone",
-      details: "+234 800 000 0000",
+      details: "+27728897818",
       color: "text-nexx-gold",
     },
   ];
@@ -67,7 +89,7 @@ const Contact = () => {
             className="text-center max-w-2xl mx-auto"
           >
             <h1 className="text-4xl md:text-6xl font-bold mb-3">
-              Contact <span className="text-primary">N.EXX <span style={{fontSize:10}}>tm</span></span>
+              Contact <span className="text-primary">N.EXX™</span>
             </h1>
             <p className="text-lg md:text-xl text-muted-foreground mb-6">
               We’re here to help. Reach out to us for support, questions, or feedback.
@@ -80,8 +102,8 @@ const Contact = () => {
             className="w-full flex justify-center mt-6"
           >
             <img
-              src={contactSupport}
-              alt="N.EXX <span style={{fontSize:10}}>tm</span> support team"
+              src={contactimage}
+              alt="N.EXX™ support team"
               className="rounded-2xl shadow-lg w-full max-w-xl object-cover"
               style={{ aspectRatio: "16/7" }}
             />
@@ -96,7 +118,10 @@ const Contact = () => {
             {contactInfo.map((info) => (
               <Card key={info.title} className="text-center h-full hover:shadow-lg transition-all duration-300">
                 <CardHeader>
-                  <div className={`w-12 h-12 mx-auto rounded-full bg-card border flex items-center justify-center ${info.color}`}>
+                  <div
+                    style={{ backgroundImage: `url(${contactimage})`, backgroundSize: "cover", backgroundPosition: "center" }}
+                    className={`w-12 h-12 mx-auto rounded-full bg-card border flex items-center justify-center ${info.color}`}
+                  >
                     <info.icon className="h-6 w-6" />
                   </div>
                   <CardTitle className="text-base mt-2">{info.title}</CardTitle>

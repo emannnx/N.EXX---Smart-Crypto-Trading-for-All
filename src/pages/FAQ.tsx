@@ -9,12 +9,13 @@ import {
 } from "@/components/ui/accordion";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import faqSupport from "@/assets/faq-support.jpg";
+import hoddie from "../assets/Hoddie.png"
 
 const FAQ = () => {
   const faqs = [
     {
-      question: "How does crypto trading work with N.EXX?",
-      answer: "Trading with N.EXX is simple. Contact us via WhatsApp or our contact form with the cryptocurrency you want to buy or sell. We'll provide you with the current market rate, and once you agree, we'll guide you through the secure transaction process. No complicated accounts or lengthy verification processes required."
+      question: "How does crypto trading work with N.EXX™?",
+      answer: "Trading with N.EXX™ is simple. Contact us via WhatsApp or our contact form with the cryptocurrency you want to buy or sell. We'll provide you with the current market rate, and once you agree, we'll guide you through the secure transaction process. No complicated accounts or lengthy verification processes required."
     },
     {
       question: "What are your exchange rates?",
@@ -25,12 +26,12 @@ const FAQ = () => {
       answer: "Most transactions are completed within 10-30 minutes depending on the cryptocurrency and payment method. Bitcoin and Ethereum transactions typically settle faster, while other cryptocurrencies may take slightly longer. We'll keep you updated throughout the entire process."
     },
     {
-      question: "Is it safe to trade with N.EXX?",
+      question: "Is it safe to trade with N.EXX™?",
       answer: "Absolutely. Security is our top priority. We use industry-standard security protocols, secure wallets, and have processed over $1M in trades without any security incidents. All transactions are verified and we maintain full transparency throughout the process."
     },
     {
       question: "Do I need to create an account?",
-      answer: "No! That's one of the things that makes N.EXX special. You don't need to create an account, go through lengthy KYC processes, or remember passwords. Simply contact us when you want to trade, and we'll handle everything for you."
+      answer: "No! That's one of the things that makes N.EXX™ special. You don't need to create an account, go through lengthy KYC processes, or remember passwords. Simply contact us when you want to trade, and we'll handle everything for you."
     },
     {
       question: "What cryptocurrencies do you support?",
@@ -70,7 +71,7 @@ const FAQ = () => {
                 Frequently Asked <span className="text-transparent bg-clip-text gradient-primary">Questions</span>
               </h1>
               <p className="text-xl text-muted-foreground">
-                Everything you need to know about trading crypto with N.EXX
+                Everything you need to know about trading crypto with N.EXX™
               </p>
             </motion.div>
             
@@ -82,7 +83,7 @@ const FAQ = () => {
             >
               <div className="relative rounded-2xl overflow-hidden shadow-2xl">
                 <img 
-                  src={faqSupport} 
+                  src={hoddie} 
                   alt="Friendly customer support representative providing helpful information"
                   className="w-full h-auto"
                 />
@@ -152,7 +153,7 @@ const FAQ = () => {
                     Contact Us
                   </motion.a>
                   <motion.a
-                    href="https://wa.me/2348000000000"
+                    href="https://wa.me/27728897818?text=Hello%20N.EXX™%2C%20I%20would%20like%20to%20know%20more%20about%20your%20crypto%20services."
                     target="_blank"
                     rel="noopener noreferrer"
                     whileHover={{ scale: 1.05 }}
