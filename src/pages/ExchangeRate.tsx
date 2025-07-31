@@ -16,6 +16,7 @@ const ExchangeRate = () => {
   const exchangeRates = [
     { amount: "$1000 and above", rate: "NGN 1527/₦" },
     { amount: "$50 to $999", rate: "NGN 1524/₦" },
+    { amount: "50$ and above", rate: "17.50 zar" },
   ];
 
   return (
