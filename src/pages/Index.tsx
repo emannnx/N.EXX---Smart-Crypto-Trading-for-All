@@ -88,18 +88,19 @@ const Index = () => {
               transition={{ duration: 0.8 }}
               className="text-center flex flex-col items-center justify-center"
             >
-              <h2 className="text-5xl md:text-7xl font-bold mb-6 font-serif">
-                Trade Wisely.{" "}
-                <span className="text-transparent bg-clip-text gradient-primary font-serif">
-                  Do it with N.EXX™ 
-                </span>
-              </h2>
-              <p className="text-xl md:text-2xl text-muted-foreground mb-4 font-sans">
-                We make crypto trading simple, secure, and sweet.
-              </p>
-              <p className="text-lg md:text-xl text-primary font-semibold mb-8 font-mono">
-                At N.EXX™, you can now easily convert your crypto to Naira 🇳🇬 and Rands 🇿🇦 – fast, secure, and hassle-free!
-              </p>
+           
+           <h2 className="text-3xl md:text-5xl font-bold mb-6 font-serif">
+  Trade Wisely.{" "}
+  <span className="text-transparent bg-clip-text gradient-primary font-serif">
+    Do it with N.EXX™ 
+  </span>
+</h2>
+<p className="text-base md:text-lg text-muted-foreground mb-4 font-sans">
+  We make crypto trading simple, secure, and sweet.
+</p>
+<p className="text-sm md:text-base text-primary font-semibold mb-8 font-mono">
+  At N.EXX™, you can now easily convert your crypto to Naira 🇳🇬 and Rands 🇿🇦 – fast, secure, and hassle-free!
+</p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Button size="lg" className="neon-glow text-lg px-8 py-3">
                   Trade Now
