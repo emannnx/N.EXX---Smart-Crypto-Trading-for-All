@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import Layout from "@/components/Layout";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import marketTrading from "@/assets/market-trading.jpg";
+import AboutCap from "../assets/AboutCapN.nexx.png" 
 
 const Market = () => {
   useEffect(() => {
@@ -134,7 +135,7 @@ const Market = () => {
             >
               <div className="relative rounded-2xl overflow-hidden shadow-2xl">
                 <img 
-                  src={marketTrading} 
+                  src={AboutCap} 
                   alt="Professional trading workspace with multiple monitors showing real-time charts"
                   className="w-full h-auto"
                 />
