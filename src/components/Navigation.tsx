@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Logo from "../assets/Logo.png"
+
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
   const location = useLocation();
@@ -12,6 +13,7 @@ const Navigation = () => {
     { name: "Home", href: "/" },
     { name: "About", href: "/about" },
     { name: "Market", href: "/market" },
+    { name: "Exchange Rate", href: "/ExchangeRate" },
     { name: "Contact", href: "/contact" },
     { name: "FAQ", href: "/faq" },
   ];
@@ -27,7 +29,7 @@ const Navigation = () => {
               className="text-2xl font-bold "
               style={{ display: 'flex', alignItems: 'center',width: 130,justifyContent: "space-between" }}
             >
-              <img src={Logo} alt="" style={{height: 40}} />
+              <img src={Logo} alt="" style={{height: 40, borderRadius: "100%"}} />
               N.EXX™
             </motion.div>
           </Link>

@@ -10,6 +10,7 @@ import Contact from "./pages/Contact";
 import Market from "./pages/Market";
 import FAQ from "./pages/FAQ";
 import NotFound from "./pages/NotFound";
+import ExchangeRate from "./pages/ExchangeRate"
 
 const ScrollToTop = () => {
   const { pathname } = useLocation();
@@ -35,6 +36,8 @@ const App = () => (
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/market" element={<Market />} />
+          <Route path="/ExchangeRate" element={<ExchangeRate />} />
+          {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="/faq" element={<FAQ />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />

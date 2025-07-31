@@ -4,6 +4,7 @@ import Layout from "@/components/Layout";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import aboutOffice from "@/assets/about-office.jpg";
 import AboutCap from "../assets/AboutCapN.nexx.png"
+import hoodie from "../assets/Hoddie.png"
 
 const About = () => {
   const milestones = [
@@ -37,7 +38,26 @@ const About = () => {
   return (
     <Layout>
       {/* Hero Section */}
-      <section className="pt-24 pb-12 w-full max-w-full overflow-x-hidden bg-gradient-to-br from-primary/5 via-background to-secondary/5">
+        <style>{`
+        .hero-section {
+          position: relative;
+          padding-top: 6rem;
+          padding-bottom: 3rem;
+          overflow: hidden;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          height: 95vh;
+          min-height: 600px;
+        }
+        @media (max-width: 1031px) {
+          .hero-section {
+            height: auto;
+            min-height: 0;
+          }
+        }
+      `}</style>
+      <section className="hero-section" id="hero">
         <div className="container mx-auto px-4 w-full max-w-full flex flex-col items-center">
           <motion.div
             initial={{ opacity: 0, y: 50 }}
@@ -55,19 +75,22 @@ const About = () => {
               We’re on a mission to make cryptocurrency trading accessible, simple, and secure for everyone.
             </p>
           </motion.div>
-          <motion.div
-            initial={{ opacity: 0, scale: 0.95 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-            className="w-full flex justify-center mt-8"
-          >
-            <img
-              src={AboutCap}
-              alt="Modern tech office environment"
-              className="rounded-2xl shadow-lg w-full max-w-2xl object-cover"
-              style={{ aspectRatio: "16/7" }}
-            />
-          </motion.div>
+                <motion.div
+  initial={{ opacity: 0, x: 50 }}
+  animate={{ opacity: 1, x: 0 }}
+  transition={{ duration: 0.8, delay: 0.2 }}
+  className="relative flex justify-center"
+>
+  <div className="relative rounded-2xl overflow-hidden shadow-2xl flex justify-center">
+    <img
+      src={hoodie}
+      alt="Professional crypto trader using modern trading dashboard"
+      className="w-full max-w-md object-cover"
+      style={{ height: "32rem" }} // 2x typical h-64 (16rem)
+    />
+    <div className="absolute inset-0 bg-gradient-to-t from-background/20 via-transparent to-transparent" />
+  </div>
+</motion.div>
         </div>
       </section>
 
