@@ -161,7 +161,7 @@ const ExchangeRate = () => {
               <div>
                 <h3 className="text-xl font-bold text-primary mb-4">N.EXX™</h3>
                 <p className="text-muted-foreground">
-                  Making crypto trading simple, secure, and sweet for everyone.
+                 Earn more with every trade
                 </p>
               </div>
               

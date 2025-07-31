@@ -287,7 +287,7 @@ const Index = () => {
             <div>
               <h3 className="text-2xl font-bold text-primary mb-4">N.EXX™</h3>
               <p className="text-muted-foreground mb-4">
-                Smart crypto trading for everyone. Simple, secure, and sweet.
+               Earn more with every trade
               </p>
               <div className="flex space-x-4">
                 <a href="https://www.instagram.com/nexx_global?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="><Button variant="outline" size="sm">Instagram</Button></a>
