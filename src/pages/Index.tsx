@@ -6,6 +6,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import heroProfessional from "@/assets/hero-professional.jpg";
 import Hoddie from "../assets/Hoddie.png"
+import firstpageinmage from "../assets/FirstPage.png"
 
 const Index = () => {
   const pillars = [
@@ -81,7 +82,7 @@ const Index = () => {
          <section className="hero-section" id="hero">
           <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-transparent to-secondary/10" />
         <div className="container mx-auto px-4 relative z-10 flex flex-col items-center justify-center h-full">
-          <div className="grid lg:grid-cols-2 gap-12 items-center justify-center w-full">
+          <div className="grid lg:grid-cols-2 items-center justify-center w-full">
             <motion.div
               initial={{ opacity: 0, x: -50 }}
               animate={{ opacity: 1, x: 0 }}
@@ -121,10 +122,10 @@ const Index = () => {
 >
   <div className="relative rounded-2xl overflow-hidden shadow-2xl flex justify-center">
     <img
-      src={Hoddie}
+      src={firstpageinmage}
       alt="Professional crypto trader using modern trading dashboard"
       className="w-full max-w-md object-cover"
-      style={{ height: "32rem" }} // 2x typical h-64 (16rem)
+      style={{ height: "35rem" }} // 2x typical h-64 (16rem)
     />
     <div className="absolute inset-0 bg-gradient-to-t from-background/20 via-transparent to-transparent" />
   </div>

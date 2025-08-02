@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { Plus } from "lucide-react";
 import Layout from "@/components/Layout";
+import FirstPages from "../assets/FirstPages.png"
 import {
   Accordion,
   AccordionContent,
@@ -83,7 +84,7 @@ const FAQ = () => {
             >
               <div className="relative rounded-2xl overflow-hidden shadow-2xl">
                 <img 
-                  src={hoddie} 
+                  src={FirstPages} 
                   alt="Friendly customer support representative providing helpful information"
                   className="w-full h-auto"
                 />
