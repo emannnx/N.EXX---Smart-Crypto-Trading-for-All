@@ -91,7 +91,7 @@ const Index = () => {
             >
            
            <h2 className="text-3xl md:text-5xl font-bold mb-6 font-serif">
-  Trade Wisel.{" "}
+  Trade Wisely.{" "}
   <span className="text-transparent bg-clip-text gradient-primary font-serif">
     Do it with N.EXX™ 
   </span>
