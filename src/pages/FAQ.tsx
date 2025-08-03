@@ -24,7 +24,7 @@ const FAQ = () => {
     },
     {
       question: "How long does settlement take?",
-      answer: "Most transactions are completed within 10-30 minutes depending on the cryptocurrency and payment method. Bitcoin and Ethereum transactions typically settle faster, while other cryptocurrencies may take slightly longer. We'll keep you updated throughout the entire process."
+      answer: "Most transactions are processed within 5 minutes, depending on the cryptocurrency and payment method used. Bitcoin and Ethereum may take a bit longer to confirm, while other assets typically settle more quickly. We’ll keep you informed every step of the way."
     },
     {
       question: "Is it safe to trade with N.EXX™?",
