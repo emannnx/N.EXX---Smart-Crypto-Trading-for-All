@@ -5,8 +5,8 @@ import CryptoTicker from "@/components/CryptoTicker";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import heroProfessional from "@/assets/hero-professional.jpg";
-import Hoddie from "../assets/Hoddie.png"
-import firstpageinmage from "../assets/FirstPage.png"
+import Hoddie from "../assets/Hoddie.png";
+import firstpageinmage from "../assets/FirstPage.png";
 
 const Index = () => {
   const pillars = [
@@ -60,7 +60,7 @@ const Index = () => {
   return (
     <Layout>
       {/* Hero Section */}
-        <style>{`
+      <style>{`
         .hero-section {
           position: relative;
           padding-top: 6rem;
@@ -79,8 +79,9 @@ const Index = () => {
           }
         }
       `}</style>
-         <section className="hero-section" id="hero">
-          <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-transparent to-secondary/10" />
+
+      <section className="hero-section" id="hero">
+        <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-transparent to-secondary/10" />
         <div className="container mx-auto px-4 relative z-10 flex flex-col items-center justify-center h-full">
           <div className="grid lg:grid-cols-2 items-center justify-center w-full">
             <motion.div
@@ -89,54 +90,47 @@ const Index = () => {
               transition={{ duration: 0.8 }}
               className="text-center flex flex-col items-center justify-center"
             >
-           
-           <h2 className="text-3xl md:text-5xl font-bold mb-6 font-serif">
-  Trade Wisely.{" "}
-  <span className="text-transparent bg-clip-text gradient-primary font-serif">
-    Do it with N.EXX™ 
-  </span>
-</h2>
-<p className="text-base md:text-lg text-muted-foreground mb-4 font-sans">
-  We make crypto trading simple, secure, and sweet.
-</p>
-<p className="text-sm md:text-base text-primary font-semibold mb-8 font-mono">
-  At N.EXX™, you can now easily convert your crypto to Naira 🇳🇬 and Rands 🇿🇦 – fast, secure, and hassle-free!
-</p>
+              <h2 className="text-3xl md:text-5xl font-bold mb-6 font-serif">
+                Trade Wisely.{" "}
+                <span className="text-transparent bg-clip-text gradient-primary font-serif">
+                  Do it with N.EXX™
+                </span>
+              </h2>
+              <p className="text-base md:text-lg text-muted-foreground mb-4 font-sans">
+                We make crypto trading simple, secure, and sweet.
+              </p>
+              <p className="text-sm md:text-base text-primary font-semibold mb-8 font-mono">
+                At N.EXX™, you can now easily convert your crypto to Naira 🇳🇬 and Rands 🇿🇦 – fast, secure, and hassle-free!
+              </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Button size="lg" className="neon-glow text-lg px-8 py-3">
                   Trade Now
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </Button>
-                {/* <Button variant="secondary" size="lg" className="text-lg px-8 py-3">
-                  Trade Now 
-                  <ArrowRight className="ml-2 h-5 w-5" />
-                </Button> */}
               </div>
             </motion.div>
 
-          <motion.div
-  initial={{ opacity: 0, x: 50 }}
-  animate={{ opacity: 1, x: 0 }}
-  transition={{ duration: 0.8, delay: 0.2 }}
-  className="relative flex justify-center"
->
-  <div className="relative rounded-2xl overflow-hidden shadow-2xl flex justify-center">
-    <img
-      src={firstpageinmage}
-      alt="Professional crypto trader using modern trading dashboard"
-      className="w-full max-w-md object-cover"
-      style={{ height: "35rem" }} // 2x typical h-64 (16rem)
-    />
-    <div className="absolute inset-0 bg-gradient-to-t from-background/20 via-transparent to-transparent" />
-  </div>
-</motion.div>
+            <motion.div
+              initial={{ opacity: 0, x: 50 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              className="relative flex justify-center"
+            >
+              <div className="relative rounded-2xl overflow-hidden shadow-2xl flex justify-center">
+                <img
+                  src={firstpageinmage}
+                  alt="Professional crypto trader using modern trading dashboard"
+                  className="w-full max-w-xs sm:max-w-sm md:max-w-md object-contain mt-[-3rem] sm:mt-[-4rem] md:mt-[-5rem]"
+                  style={{ height: "30rem" }}
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-background/20 via-transparent to-transparent" />
+              </div>
+            </motion.div>
           </div>
         </div>
       </section>
+
       <CryptoTicker />
-
-
-     
 
       {/* Services Section */}
       <section className="py-20 bg-muted/50">
@@ -182,7 +176,7 @@ const Index = () => {
         </div>
       </section>
 
-       {/* 3 Pillars Section */}
+      {/* 3 Pillars Section */}
       <section className="py-20">
         <div className="container mx-auto px-4">
           <motion.div
@@ -239,26 +233,17 @@ const Index = () => {
             <h2 className="text-4xl md:text-5xl font-bold mb-8">
               Trusted by <span className="text-accent">Thousands</span>
             </h2>
-            
+
             <div className="grid md:grid-cols-3 gap-8 mb-16">
-              <motion.div
-                whileHover={{ scale: 1.05 }}
-                className="text-center"
-              >
+              <motion.div whileHover={{ scale: 1.05 }} className="text-center">
                 <div className="text-4xl font-bold text-primary mb-2">$1M+</div>
                 <p className="text-muted-foreground">in trades processed</p>
               </motion.div>
-              <motion.div
-                whileHover={{ scale: 1.05 }}
-                className="text-center"
-              >
+              <motion.div whileHover={{ scale: 1.05 }} className="text-center">
                 <div className="text-4xl font-bold text-secondary mb-2">10K+</div>
                 <p className="text-muted-foreground">satisfied customers</p>
               </motion.div>
-              <motion.div
-                whileHover={{ scale: 1.05 }}
-                className="text-center"
-              >
+              <motion.div whileHover={{ scale: 1.05 }} className="text-center">
                 <div className="text-4xl font-bold text-accent mb-2">24/7</div>
                 <p className="text-muted-foreground">customer support</p>
               </motion.div>
@@ -288,32 +273,28 @@ const Index = () => {
           <div className="grid md:grid-cols-4 gap-8">
             <div>
               <h3 className="text-2xl font-bold text-primary mb-4">N.EXX™</h3>
-              <p className="text-muted-foreground mb-4">
-               Earn more with every trade
-              </p>
+              <p className="text-muted-foreground mb-4">Earn more with every trade</p>
               <div className="flex space-x-4">
-                <a href="https://www.instagram.com/nexx_global?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="><Button variant="outline" size="sm">Instagram</Button></a>
-                <a
-                  href="https://wa.me/27728897818?text=Hello%20N.EXX™%2C%20I%20would%20like%20to%20know%20more%20about%20your%20crypto%20services."
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
+                <a href="https://www.instagram.com/nexx_global">
+                  <Button variant="outline" size="sm">Instagram</Button>
+                </a>
+                <a href="https://wa.me/27728897818" target="_blank" rel="noopener noreferrer">
                   <Button variant="outline" size="sm">WhatsApp</Button>
                 </a>
               </div>
             </div>
-            
+
             <div>
               <h4 className="font-semibold mb-4">Quick Links</h4>
               <ul className="space-y-2 text-muted-foreground">
                 <li><a href="/about" className="hover:text-primary transition-colors">About</a></li>
                 <li><a href="/market" className="hover:text-primary transition-colors">Market</a></li>
-                 <li><a href="/ExchangeRate" className="hover:text-primary transition-colors">Exchange Rate</a></li>
+                <li><a href="/ExchangeRate" className="hover:text-primary transition-colors">Exchange Rate</a></li>
                 <li><a href="/contact" className="hover:text-primary transition-colors">Contact</a></li>
                 <li><a href="/faq" className="hover:text-primary transition-colors">FAQ</a></li>
               </ul>
             </div>
-            
+
             <div>
               <h4 className="font-semibold mb-4">Services</h4>
               <ul className="space-y-2 text-muted-foreground">
@@ -323,18 +304,18 @@ const Index = () => {
                 <li>Cash Any Crypto</li>
               </ul>
             </div>
-            
+
             <div>
               <h4 className="font-semibold mb-4">Contact Info</h4>
               <ul className="space-y-2 text-muted-foreground">
                 <li>Admin@nexxglobal.net</li>
-                <li>‪+27728897818‬</li>
+                <li>+27728897818</li>
               </ul>
             </div>
           </div>
-          
+
           <div className="border-t border-border mt-8 pt-8 text-center text-muted-foreground">
-            <p>&copy; 2024 N.EXX™.  All rights reserved.</p>
+            <p>&copy; 2024 N.EXX™. All rights reserved.</p>
           </div>
         </div>
       </footer>
