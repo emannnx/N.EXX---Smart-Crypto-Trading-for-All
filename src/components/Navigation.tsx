@@ -15,7 +15,7 @@ const Navigation = () => {
     { name: "Market", href: "/market" },
     { name: "Exchange Rate", href: "/ExchangeRate" },
     { name: "Contact", href: "/contact" },
-    { name: "FA", href: "/faq" },
+    { name: "FAQ", href: "/faq" },
   ];
 
   return (
