@@ -167,7 +167,7 @@ const Index = () => {
                     <CardTitle>{service.title}</CardTitle>
                   </CardHeader>
                   <CardContent>
-                    <CardDescription>{service.description}</CardDescription>
+                    <CardDescription className="font-mono">{service.description}</CardDescription>
                   </CardContent>
                 </Card>
               </motion.div>
