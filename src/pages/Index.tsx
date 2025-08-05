@@ -97,7 +97,7 @@ const Index = () => {
                 </span>
               </h2>
               <p className="text-base md:text-lg text-muted-foreground mb-4 font-sans">
-                We make crypto trading simple, secure, and sweet.
+                We make crypto trading simple, secure, and Swift.
               </p>
               <p className="text-sm md:text-base text-primary font-semibold mb-8 font-mono">
                 At N.EXX™, you can now easily convert your crypto to Naira 🇳🇬 and Rands 🇿🇦 – fast, secure, and hassle-free!
