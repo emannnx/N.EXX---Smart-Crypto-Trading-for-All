@@ -119,7 +119,7 @@ const Index = () => {
               <div className="relative rounded-2xl overflow-hidden shadow-2xl flex justify-center">
                 <img
                   src={firstpageinmage}
-                  alt="Professional crypto trader using modern trading dashboard"
+                  alt="Professional crypto trader using modern trading dashboar"
                   className="w-full h-auto"
                   // style={{ height: "30rem", width: "50rem", objectFit: "contain" }}
                 />
