@@ -121,7 +121,7 @@ const Index = () => {
                   src={firstpageinmage}
                   alt="Professional crypto trader using modern trading dashboard"
                   className="w-full h-auto"
-                  // style={{ height: "30rem", width: "50rem", objectFit: "contain" }}
+                  // style={{ height: "30rem", width: "50rem", objectFit: "contain" 
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-background/20 via-transparent to-transparent" />
               </div>
