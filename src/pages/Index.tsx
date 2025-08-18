@@ -103,7 +103,14 @@ const Index = () => {
                 At N.EXX™, you can now easily convert your crypto to Naira 🇳🇬 and Rands 🇿🇦 – fast, secure, and hassle-free!
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Button size="lg" className="neon-glow text-lg px-8 py-3">
+                <Button size="lg" className="neon-glow text-lg px-8 py-3"
+                   onClick={() =>
+                      window.open(
+                        "https://wa.me/27728897818?text=Hello%20N.EXX™%2C%20I%20would%20like%20to%20know%20more%20about%20your%20crypto%20services.",
+                        "_blank"
+                      )
+                    }
+                >
                   Trade Now
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </Button>
