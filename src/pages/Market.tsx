@@ -308,7 +308,7 @@ const Market = () => {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <motion.a
-                href="https://wa.me/27728897818?text=Hello%20N.EXX%2C%20I%20would%20like%20to%20know%20more%20about%20your%20crypto%20services."
+                href="https://www.instagram.com/nexx_global?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==?text=Hello%20N.EXX%2C%20I%20would%20like%20to%20know%20more%20about%20your%20crypto%20services."
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 className="inline-flex items-center justify-center px-8 py-3 bg-primary text-primary-foreground font-semibold rounded-lg hover:bg-primary/90 transition-colors"
