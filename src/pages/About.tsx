@@ -198,7 +198,7 @@ const About = () => {
               Our <span className="text-primary">Values</span>
             </h2>
             <p className="text-lg text-muted-foreground">
-              The principles that guide everything we dos
+              The principles that guide everything we do
             </p>
           </motion.div>
           <div className="grid md:grid-cols-3 gap-6">
